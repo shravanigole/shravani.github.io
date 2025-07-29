@@ -1,0 +1,280 @@
+/* === Base Setup === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #ffb6c1, #ba68c8, #64b5f6, #81c784);
+  background-size: 300% 300%;
+  animation: gradientShift 15s ease infinite;
+  color: #222;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* === Dark Theme Base === */
+body.dark-theme {
+  background: linear-gradient(135deg, #37003c, #230043, #002d4d, #003c2e);
+  background-size: 300% 300%;
+  animation: gradientShift 15s ease infinite;
+  color: #f4f4f4;
+}
+
+/* === Header === */
+header {
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+header h1 {
+  font-size: 1.6rem;
+  color: #3a3a3a;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  gap: 1.2rem;
+  margin-right: 1rem;
+}
+nav a {
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+nav a.active,
+nav a:hover {
+  background: #ffd9ec;
+  color: #c2185b;
+}
+
+#theme-toggle {
+  background: linear-gradient(to right, #9c27b0, #e91e63);
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(233, 30, 99, 0.3);
+}
+
+/* === Hero === */
+.hero {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-left: 8px solid #c2185b;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+}
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #c2185b;
+}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  color: #444;
+}
+.hero ul li {
+  margin-bottom: 0.6rem;
+  color: #444;
+}
+
+/* === Cards === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  border-left: 6px solid #6a1b9a;
+}
+.card:nth-child(2) {
+  border-left: 6px solid #0097a7;
+}
+.card:nth-child(3) {
+  border-left: 6px solid #ff4081;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.card p {
+  color: #555;
+}
+.cards a {
+  color: inherit;
+  word-break: break-word;
+}
+
+/* === Education Pathway === */
+.education-path .timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.edu-step {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1.2rem;
+  border-radius: 10px;
+  border-left: 5px solid #4caf50;
+  flex: 1 1 250px;
+  color: #222;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+body.dark-theme .edu-step {
+  background-color: rgba(30, 30, 30, 0.95);
+  border-left-color: #81c784;
+  color: #f4f4f4;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* === Hobbies / Lifestyle === */
+.hobbies .card {
+  background: white;
+}
+body.dark-theme .hobbies .card {
+  background: #1f1f1f;
+  color: #ffffff;
+}
+
+/* === Dark Theme Card Overrides === */
+body.dark-theme .card,
+body.dark-theme .hero {
+  background: #1f1f1f;
+  color: #ffffff;
+  border-color: #9c27b0;
+}
+body.dark-theme .card h3,
+body.dark-theme .card p,
+body.dark-theme .hero h2,
+body.dark-theme .hero p,
+body.dark-theme .hero ul li {
+  color: #ffffff;
+}
+
+/* === Contact Form === */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.contact-form button {
+  padding: 0.9rem;
+  background: #ec407a;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.contact-form button:hover {
+  background: #c2185b;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-top: 1px solid #ddd;
+  color: #444;
+  backdrop-filter: blur(6px);
+}
+body.dark-theme footer {
+  background: rgba(32, 32, 32, 0.85);
+  color: #ccc;
+  border-top: 1px solid #444;
+}
+
+/* === Scroll to Top Button === */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+#scrollToTopBtn:hover {
+  background: #c2185b;
+}
+
+/* === Animations === */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+}
