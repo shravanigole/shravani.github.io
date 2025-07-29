@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SplitEase | Project</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #8befb2;
+      color: #222;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #bcfebf;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      color: #077219;
+      font-size: 2.5rem;
+    }
+
+    .project-meta {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .tech-stack span {
+      display: inline-block;
+      background-color: #ccfbcf;
+      color: #04400a;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-right: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .github-link a {
+      color: #176713;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .github-link a:hover {
+      text-decoration: underline;
+    }
+
+    .screenshot {
+      margin-top: 20px;
+    }
+
+    .screenshot img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.screenshots img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.screenshots img:hover {
+  transform: scale(1.05);
+}
+
+
+  </style>
+</head>
+<body>
+   <div class="container">
+  <h1>SplitEase - Group Expense Splitting App</h1>
+  <div class="project-meta">
+    Android Application | Java, XML, Room Database | 2025
+  </div>
+
+  <div class="section">
+    <h2>About the Project</h2>
+    <p>
+      SplitEase is an Android application designed to simplify group expense tracking and bill splitting. Whether you're planning a trip with friends, managing household expenses, or organizing group events, SplitEase helps you keep track of who owes whom, without any awkward conversations.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Create and manage group expense events (e.g., trips, dinners, shared shopping).</li>
+      <li>Add expenses and assign shares to different participants.</li>
+      <li>Automatically calculates who owes how much to whom.</li>
+      <li>Mark payments as settled and track history.</li>
+      <li>User-friendly interface and clean design for effortless usage.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>My Role</h2>
+    <p>
+      I conceptualized, designed, and built the entire app from scratch using Android Studio. I handled both the front-end (using XML) and back-end logic (Java), and implemented persistent local storage using Room Database. The focus was on creating an intuitive UX and ensuring accurate expense calculations.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Tech Stack</h2>
+    <div class="tech-stack">
+      <span>Android Studio</span>
+      <span>Java</span>
+      <span>XML</span>
+      <span>Room Database</span>
+    </div>
+  </div>
+
+  <div class="section github-link">
+    <h2>GitHub Repository</h2>
+    <p>
+      Check out the full code on GitHub:  
+      <a href="https://github.com/shravanigole/expense" target="_blank">github.com/shravanigole/expense</a>
+    </p>
+  </div>
+
+  <div class="section screenshot">
+    <h2>App Screenshots</h2>
+    <div class="screenshots">
+    <img src="./ss/ss1.jpg" alt="SplitEase App Screenshot" />
+    <img src="./ss/ss2.jpg" alt="SplitEase App Screenshot" />
+    <img src="./ss/ss3.jpg" alt="SplitEase App Screenshot" />
+    <img src="./ss/ss4.jpg" alt="SplitEase App Screenshot" />
+    <img src="./ss/ss5.jpg" alt="SplitEase App Screenshot" />
+    </div>
+  </div>
+</div>
+</body>
+</html>
